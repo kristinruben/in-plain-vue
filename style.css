@@ -88,7 +88,7 @@ textarea {
 }
 
 button {
-  margin-left: auto;
+  margin-left: inherit;
   padding-right: 40px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #fff;
@@ -97,5 +97,23 @@ button {
   padding: 15px;
   font-size: 14px;
   border: 0;
-  
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+p {
+  color: #14171a;
+  margin: 15px;
+  margin-left: auto;
+}
+
+.dark-red {
+  color: darkred;
+}
+
+.light-red {
+  color: indianred;
 }

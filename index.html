@@ -6,30 +6,36 @@
       Compose a tweet in Vue.js
     </title>
     <script src="https://use.fontawesome.com/92d99cf3de.js"></script>
+    <script src="https://unpkg.com/vue"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="modal-title">
-          Compose new tweet
-        </span>
-      </div>
-      <div class="modal-tweet-form-container">
-        <div class="tweet-form tweet-box">
-          <textarea placeholder="Tweet your reply"></textarea>
+    <div id="vueApp">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-title">
+            Compose new tweet
+          </span>
         </div>
-        <br/>
-        <br/>
-        <div class="icons">
-          <i class="fa fa-2x fa-camera"></i>
-          <i class="fa fa-2x fa-bar-chart"></i>
-          <i class="fa fa-2x fa-map-marker"></i>
-        <button class="tweet-button">Tweet</button>
+        <div class="modal-tweet-form-container">
+          <div class="tweet-form tweet-box">
+            <textarea v-model="tweet" placeholder="Tweet your reply"></textarea>
+          </div>
+          <br/>
+          <br/>
+          <div class="icons">
+            <i class="fa fa-2x fa-camera"></i>
+            <i class="fa fa-2x fa-bar-chart"></i>
+            <i class="fa fa-2x fa-map-marker"></i>
+            <p v-bind:class="{ 'light-red': underTwentyMark, 'dark-red': underTenMark }">{{ charactersRemaining }}</p>
+          <button v-bind:disabled="tweetIsOutOfRange" class="tweet-button">Tweet</button>
+          </div>
         </div>
       </div>
     </div>
+
+    <script src="vue.js"></script>
+
 
   </body>
 

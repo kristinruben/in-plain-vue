@@ -27,7 +27,7 @@
             <i class="fa fa-2x fa-camera"></i>
             <i class="fa fa-2x fa-bar-chart"></i>
             <i class="fa fa-2x fa-map-marker"></i>
-            <p v-bind:class="{ 'light-red': underTwentyMark, 'dark-red': underTenMark }">{{ charactersRemaining }}</p>
+            <p v-bind:class="{ 'dark-red': underTwentyMark, 'light-red': underTenMark }">{{ charactersRemaining }}</p>
           <button v-bind:disabled="tweetIsOutOfRange" class="tweet-button">Tweet</button>
           </div>
         </div>
@@ -35,7 +35,6 @@
     </div>
 
     <script src="vue.js"></script>
-
 
   </body>
 
